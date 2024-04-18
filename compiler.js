@@ -14,6 +14,12 @@ module.exports = function compiler(input) {
 
 
     // 3. Transformation
+    // converts the AST into a new jsAST
+    const jsAST = transformer(ast);
+    console.log(JSON.stringify(jsAST, null, 2));
+
+
+
     // 4. Code Generation
     //
     // return jsCode;
